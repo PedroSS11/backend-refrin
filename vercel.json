@@ -1,5 +1,4 @@
 {
-    "name": "refrin-back",
     "version": 2,
     "public": true,
     "build": {

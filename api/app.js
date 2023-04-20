@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 
-const dotenv = dotenv.config();
+const dotenvapp = dotenv.config();
 
 import express from "express";
 import cors from "cors";
@@ -22,6 +22,10 @@ app.use(cors());
 // rotas
 const router = require("../routes/routes");
 app.use(router);
+
+app.get("/api", (req, res) => {
+  res.send("Hello World!");
+});
 
 sequelize
   //.sync({ force: true })
