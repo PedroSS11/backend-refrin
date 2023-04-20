@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 // rotas
-import router from "../routes/routes";
+import router from "../routes/routes.js";
 app.use(router);
 
 sequelize

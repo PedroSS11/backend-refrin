@@ -8,15 +8,15 @@
     "routes": [
         {
             "src": "/api/users/(.*)",
-            "dest": "api/routes.js"
+            "dest": "/routes/users.js"
         },
         {
             "src": "/api/mail/(.*)",
-            "dest": "api/routes.js"
+            "dest": "/routes/mail.js"
         },
         {
             "src": "/api/budget/(.*)",
-            "dest": "api/routes.js"
+            "dest": "/routes/budget.js"
         },
         {
             "src": "/(.*)",
