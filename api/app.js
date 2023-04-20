@@ -5,7 +5,7 @@ const dotenvapp = dotenv.config();
 import express from "express";
 import cors from "cors";
 
-import { sequelize } from "../config/conn";
+import sequelize from "../config/conn.js";
 
 const app = express();
 const port = process.env.PORT;
@@ -23,15 +23,11 @@ app.use(cors());
 import router from "../routes/routes";
 app.use(router);
 
-app.get("/api", (req, res) => {
-  res.send("Hello World!");
-});
-
 sequelize
   //.sync({ force: true })
   .sync()
   .then(() => {
-    app.listen(port || 9001, () => {
+    app.listen(4000, () => {
       console.log(`Server rodadando na porta ${port}`);
     });
   })
