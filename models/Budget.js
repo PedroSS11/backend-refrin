@@ -1,7 +1,7 @@
 import { DataTypes, Sequelize } from "sequelize";
 import sequelize from "../config/conn.js";
 import User from "../models/User";
-//a
+//aa
 const Budget = sequelize.define("Budget", {
   subject: {
     type: DataTypes.STRING,
