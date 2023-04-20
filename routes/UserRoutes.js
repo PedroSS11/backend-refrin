@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 
 // controller
-const {
+import {
   register,
   getAllUsers,
   getCurrentUser,
@@ -11,10 +11,10 @@ const {
   updateUser,
   deleteUser,
   getByActor,
-} = require("../controllers/UserController");
+} from "../controllers/UserController";
 
 // middlewares
-const checkToken = require("../middlewares/checkToken");
+import checkToken from "../middlewares/checkToken";
 
 // get current user
 router.get("/", checkToken, getCurrentUser);

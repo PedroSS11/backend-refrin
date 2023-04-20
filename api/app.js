@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 // rotas
-const router = require("../routes/routes");
+import router from "../routes/routes";
 app.use(router);
 
 app.get("/api", (req, res) => {

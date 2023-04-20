@@ -2,14 +2,14 @@ import express from "express";
 const router = express.Router();
 
 // controller
-const {
+import {
   createBudget,
   getAll,
   getAllBySeller,
-} = require("../controllers/BudgetController");
+} from "../controllers/BudgetController";
 
 // middlewares
-const checkToken = require("../middlewares/checkToken");
+import checkToken from "../middlewares/checkToken";
 
 // create
 router.post("/users/:userId/create", createBudget);

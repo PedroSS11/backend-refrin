@@ -2,14 +2,14 @@ import express from "express";
 const router = express.Router();
 
 // controller
-const {
+import {
   createMail,
   getById,
   getAllMails,
-} = require("../controllers/MailController");
+} from "../controllers/MailController";
 
 // middlewares
-const checkToken = require("../middlewares/checkToken");
+import checkToken from "../middlewares/checkToken";
 
 // create mail
 router.post("/", createMail);
