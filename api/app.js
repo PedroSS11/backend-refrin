@@ -1,11 +1,11 @@
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 
-const dotenvapp = dotenv.config();
+const dotenv = dotenv.config();
 
-import express from "express"
+import express from "express";
 import cors from "cors";
 
-import conn from "../config/conn";
+import sequelize from "../config/conn";
 
 const app = express();
 const port = process.env.PORT;
@@ -17,15 +17,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //config para o cors
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors());
 
 // rotas
 const router = require("../routes/routes");
 app.use(router);
 
-
-
-conn
+sequelize
   //.sync({ force: true })
   .sync()
   .then(() => {
