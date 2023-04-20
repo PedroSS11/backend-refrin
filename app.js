@@ -5,10 +5,10 @@ const dotenvapp = dotenv.config();
 import express from "express";
 import cors from "cors";
 
-import sequelize from "../config/conn.js";
+import sequelize from "./config/conn.js";
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 9001;
 
 //models
 
@@ -20,14 +20,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 // rotas
-import router from "../routes/routes.js";
+import router from "./routes/routes.js";
 app.use(router);
 
 sequelize
   //.sync({ force: true })
   .sync()
   .then(() => {
-    app.listen(4000, () => {
+    app.listen(port, () => {
       console.log(`Server rodadando na porta ${port}`);
     });
   })

@@ -1,26 +1,28 @@
 {
     "version": 2,
-    "public": true,
-    "build": {
-        "src": "api/app.js",
+    "builds": [
+      {
+        "src": "./app.js",
         "use": "@vercel/node"
-    },
+      }
+    ],
     "routes": [
-        {
-            "src": "/api/users/(.*)",
-            "dest": "/routes/users.js"
-        },
-        {
-            "src": "/api/mail/(.*)",
-            "dest": "/routes/mail.js"
-        },
-        {
-            "src": "/api/budget/(.*)",
-            "dest": "/routes/budget.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "api/app.js"
-        }
+      {
+        "src": "/api/users/(.*)",
+        "dest": "/routes/users.js"
+      },
+      {
+        "src": "/api/mail/(.*)",
+        "dest": "/routes/mail.js"
+      },
+      {
+        "src": "/api/budget/(.*)",
+        "dest": "/routes/budget.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/app.js"
+      }
     ]
-}
+  }
+  
