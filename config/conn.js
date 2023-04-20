@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize')
-
+// aa
 
 const sequelize = new Sequelize('bwtecn91_refrin_react', 'bwtecn91', 'n9v6A1fk3N', {
     host: '108.179.193.14',
