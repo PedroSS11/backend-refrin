@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "api/app.js",
+  "type": "module",
   "scripts": {
     "start": "node .",
     "dev": "nodemon api/app.js",
