@@ -1,6 +1,6 @@
-const { DataTypes, Sequelize } = require("sequelize");
-const db = require("../config/conn");
-const User = require("../models/User");
+import { DataTypes, Sequelize } from "sequelize";
+import db from "../config/conn";
+import User from "../models/User";
 
 const Budget = db.define("Budget", {
   subject: {

@@ -1,9 +1,11 @@
-require("dotenv").config();
+import dotenv from "dotenv"
 
-const express = require("express");
-const cors = require("cors");
+const dotenvapp = dotenv.config();
 
-const conn = require("../config/conn");
+import express from "express"
+import cors from "cors";
+
+import conn from "../config/conn";
 
 const app = express();
 const port = process.env.PORT;
@@ -27,7 +29,7 @@ conn
   //.sync({ force: true })
   .sync()
   .then(() => {
-    app.listen(port, () => {
+    app.listen(port || 9001, () => {
       console.log(`Server rodadando na porta ${port}`);
     });
   })

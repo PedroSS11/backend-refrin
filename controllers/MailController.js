@@ -1,4 +1,4 @@
-const Mail = require("../models/Mail");
+import Mail from "../models/Mail";
 
 const createMail = async (req, res) => {
   const { subject, body, from, to, date } = req.body;

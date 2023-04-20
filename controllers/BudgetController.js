@@ -1,5 +1,5 @@
-const Budget = require("../models/Budget");
-const User = require("../models/User");
+import Budget from "../models/Budget";
+import User from "../models/User";
 
 const createBudget = async (req, res) => {
   try {

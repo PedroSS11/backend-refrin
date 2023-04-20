@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize')
+import { Sequelize } from 'sequelize'
 // aa
 
 const sequelize = new Sequelize('bwtecn91_refrin_react', 'bwtecn91', 'n9v6A1fk3N', {
