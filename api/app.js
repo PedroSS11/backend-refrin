@@ -5,7 +5,7 @@ const dotenvapp = dotenv.config();
 import express from "express";
 import cors from "cors";
 
-import sequelize from "../config/conn";
+import { sequelize } from "../config/conn";
 
 const app = express();
 const port = process.env.PORT;
