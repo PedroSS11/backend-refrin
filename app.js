@@ -23,6 +23,10 @@ app.use(cors());
 import router from "./routes/routes.js";
 app.use(router);
 
+app.get("/", (req, res) => {
+  res.send("HELLO!");
+});
+
 sequelize
   //.sync({ force: true })
   .sync()
