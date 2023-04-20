@@ -1,9 +1,15 @@
 const { Sequelize } = require('sequelize')
 
-const sequelize = new Sequelize('refrin_react', 'root', '', {
-    host: 'localhost',
+
+const sequelize = new Sequelize('bwtecn91_refrin_react', 'bwtecn91', 'n9v6A1fk3N', {
+    host: '108.179.193.14',
     dialect: 'mysql'
 })
+
+// const sequelize = new Sequelize('refrin_react', 'bwtecn91', 'n9v6A1fk3N', {
+//     host: '108.179.193.14',
+//     dialect: 'mysql'
+// })
 
 try {
     sequelize.authenticate()
