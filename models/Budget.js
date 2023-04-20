@@ -1,8 +1,8 @@
 import { DataTypes, Sequelize } from "sequelize";
-import db from "../config/conn";
+import sequelize from "../config/conn";
 import User from "../models/User";
 
-const Budget = db.define("Budget", {
+const Budget = sequelize.define("Budget", {
   subject: {
     type: DataTypes.STRING,
     allowNull: false,

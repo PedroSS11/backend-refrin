@@ -1,7 +1,7 @@
 import { DataTypes, Sequelize } from "sequelize";
-import db from "../config/conn";
+import sequelize from "../config/conn";
 
-const Mail = db.define("Mail", {
+const Mail = sequelize.define("Mail", {
   subject: {
     type: DataTypes.STRING,
     allowNull: false,
